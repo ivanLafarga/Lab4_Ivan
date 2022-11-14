@@ -8,3 +8,8 @@
 # -- repository: YOUR REPOSITORY URL                                                                     -- #
 # -- --------------------------------------------------------------------------------------------------- -- #
 """
+import plotly.express as px
+
+def grafica(df, y, title): 
+    fig=px.line(df, x='TimeStamp', y=y, color="Exchange",title=(title))
+    return fig.show()
